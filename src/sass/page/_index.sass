@@ -1,7 +1,97 @@
-p
-    color: green
-    display: inline-block
+.intro
+    overflow: hidden
+    background: #020b12
+    &-list
+        position: relative
+        .flickity-page-dots
+            position: absolute
+            top: 50%
+            right: 5vw
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            transform: translateY(-50%)
+            .dot
+                display: inline-block
+                width: 15px
+                height: 15px
+                border: 1px solid #FFF
+                border-radius: 50%
+                margin-bottom: 15px
+                &:hover
+                    cursor: pointer
+                &:last-child
+                    margin-bottom: 0
+                &.is-selected
+                    background: #FFF
+        &__item
 
-body
-    background: white
-    
+.intro-item
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-end
+    position: relative
+    overflow: hidden
+    box-sizing: border-box
+    padding-bottom: 5vh
+    &__bg
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+        object-fit: cover
+    &__title
+        color: #ffffff
+        +rfs(62px)
+        font-size: 62px
+        font-weight: normal
+        text-align: center
+        margin-top: 15px
+        span
+            font-weight: bold
+    &__text
+        opacity: 0.9
+        color: #ffffff
+        +rfs(48px)
+        text-align: center
+        margin-bottom: 22px
+        span
+            color: #0feb9e
+    &__small
+        opacity: 0.9
+        color: #ffffff
+        text-align: center
+        +rfs(18px)
+        position: relative
+        margin-bottom: 30px
+        &:after,
+        &:before
+            position: absolute
+            content: ''
+            width: 28px
+            height: 1px
+            top: 50%
+            transform: translateY(+50%)
+            background-color: #0feb9e
+        &:after
+            left: 110%
+        &:before
+            right: 110%
+
+    &__social
+
+.intro-social
+    display: flex
+    align-items: center
+    &__item
+        margin-right: 10px
+        &:last-child
+            margin-right: 0
+        a
+            display: block
+            img
+
