@@ -1,8 +1,9 @@
 .intro
     overflow: hidden
-    background: #020b12
     &-list
         position: relative
+        background: #051518
+        z-index: -1
         .flickity-page-dots
             position: absolute
             top: 50%
@@ -44,10 +45,11 @@
         top: 50%
         transform: translate(-50%, -50%)
         object-fit: cover
+        z-index: -1
     &__title
+        opacity: 0.9
         color: #ffffff
         +rfs(62px)
-        font-size: 62px
         font-weight: normal
         text-align: center
         margin-top: 15px
@@ -83,6 +85,7 @@
             right: 110%
 
     &__social
+        opacity: 0.9
 
 .intro-social
     display: flex
@@ -95,3 +98,359 @@
             display: block
             img
 
+.features
+    padding: 77px 0 150px 0
+    background-color: #f4f7f9
+    &-body
+        &__title
+        &__items
+
+.fetures-items
+    display: flex
+    justify-content: space-between
+    position: relative
+    .flickity-page-dots
+        position: absolute
+        display: flex
+        bottom: -50px
+        left: 50%
+        transform: translateX(-50%)
+        .dot
+                display: inline-block
+                width: 10px
+                height: 10px
+                border: 1px solid #062033
+                border-radius: 50%
+                margin-right: 15px
+                opacity: 0.2
+                &:hover
+                    cursor: pointer
+                &:last-child
+                    margin-right: 0
+                &.is-selected
+                    background-color: #062033
+                    opacity: 1
+    &__feat
+        width: 30%
+
+.fetures-feat
+    box-sizing: border-box
+    padding-left: 50px
+    position: relative
+    &__logo
+        position: absolute
+        left: 0
+        top: 0
+    &__title
+        +rfs(20px)
+        color: #062033
+        font-weight: 400
+        margin-bottom: 15px
+    &__text
+        opacity: 0.7
+        +rfs(13px)
+        line-height: 1.62
+        color: #062033
+
+.works
+    padding: 50px 0 77px 0
+    &-body
+        &__title
+        &__text
+        &__gallery
+
+.works-gallery
+    &__nav
+        margin-bottom: 30px
+    &__grid
+
+.works-nav
+    display: flex
+    justify-content: center
+    align-items: center
+    &__nav
+    &__buttin
+        border: none
+        background: none
+        +rfs(14px)
+        font-weight: bold
+        text-align: center
+        margin-right: 15px
+        color: #062033
+        &:last-child
+            margin-right: 0
+        &.active
+            background-color: #0eb493
+            color: #ffffff
+            border-radius: 4px
+
+.works-grids
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item
+        width: calc(100% / 4)
+        &:hover
+            .works-hover
+                opacity: 0.9
+
+.works-grid
+    position: relative
+    &__img
+        display: inline-block
+        max-width: 100%
+        height: auto
+    &__hover
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+
+
+.works-hover
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 20px
+    background-color: #0eb493
+    opacity: 0
+    transition: all 0.4s
+    &__logo
+        margin-bottom: 30px
+    &__title
+        +rfs(18px)
+        font-weight: bold
+        line-height: 1.33
+        text-align: center
+        color: #ffffff
+        margin-bottom: 10px
+    &__text
+        +rfs(14px)
+        line-height: 1.33
+        text-align: center
+        color: #ffffff
+
+.team
+    padding: 50px 0 150px 0
+    &-body
+        &__title
+        &__description
+        &__people
+
+.team-people
+    display: flex
+    justify-content: space-between
+    position: relative
+    &__item
+        width: 22%
+    .flickity-page-dots
+        position: absolute
+        display: flex
+        bottom: -50px
+        left: 50%
+        transform: translateX(-50%)
+        .dot
+                display: inline-block
+                width: 10px
+                height: 10px
+                border: 1px solid #062033
+                border-radius: 50%
+                margin-right: 15px
+                opacity: 0.2
+                &:hover
+                    cursor: pointer
+                &:last-child
+                    margin-right: 0
+                &.is-selected
+                    background-color: #062033
+                    opacity: 1
+
+.team-item
+    position: relative
+    text-align: center
+    &:hover
+        .team-item__hover
+            opacity: 0.8
+        .team-item__name
+            color: #0eb493
+    &__block
+        position: relative
+        margin-bottom: 15px
+    &__img
+        display: inline-block
+        max-width: 100%
+        height: auto
+    &__hover
+        box-sizing: border-box
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        padding: 23px
+        opacity: 0
+        transition: all 0.4s
+        background-color: #0eb493
+        padding: 15px
+    &__name
+        +rfs(18px)
+        font-weight: 600
+        line-height: 1.33
+        text-align: center
+        color: #062033
+    &__position
+        opacity: 0.56
+        +rfs(13px)
+        line-height: 1.85
+        text-align: center
+
+.team-hover
+    &__title
+        +rfs(16px)
+        line-height: 1.5
+        color: #ffffff
+        font-weight: bold
+    &__intro
+        +rfs(16px)
+        line-height: 1.5
+        color: #ffffff
+        margin-bottom: 10px
+    &__cosials
+        display: flex
+        width: 100%
+        justify-content: center
+
+.team-socials
+    &__link
+        margin-right: 10px
+        width: 42px
+        height: 42px
+        &:last-child
+            margin-right: 0
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 100%
+            height: 100%
+            background-color: #0eb493
+            opacity: 0.95
+            img
+                display: inline-block
+
+.facts
+    background: url('../img/bg-main.png') 0 0 no-repeat
+    background-size: cover
+    padding: 100px 0
+    &-body
+        &__title
+        &__item
+
+.facts-item
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    &__fun
+        width: 20%
+        text-align: center
+
+.fact-fun
+    &__img
+        display: inline-flex
+        align-items: center
+        justify-content: space-around
+        width: 130px
+        height: 130px
+        border: 1px solid #ffffff
+        border-radius: 50%
+        margin-bottom: 10px
+        img
+    &__number
+        +rfs(60px)
+        font-weight: 600
+        text-align: center
+        color: #ffffff
+    &__text
+        +rfs(18px)
+        text-align: center
+        color: #ffffff
+        margin-top: 10px
+
+.discuss
+    padding: 77px 0
+    &-body
+        &__title
+        &__text
+        &__content
+
+.discuss-content
+    display: flex
+    justify-content: space-between
+    align-items: stretch
+    &__address
+    &__form
+    &__socials
+
+.discuss-address
+    +rfs(13px)
+    line-height: 1.45
+    color: #062033
+    width: 245px
+    margin-right: 30px
+    &__title
+        +rfs(22px)
+        text-align: left
+        color: #062033
+        margin-bottom: 10px
+    a
+        text-decoration: none
+        color: #6a737b
+        display: block
+
+.discuss-form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__title
+        +rfs(24px)
+        font-weight: bold
+        text-align: left
+        color: #062033
+    &__input
+        border: none
+        border-bottom: 1px solid #000
+        opacity: 0.2
+        +rfs(13px)
+        margin-bottom: 15px
+    &__button
+        margin-left: auto
+        background: none
+        border: none
+        +rfs(16px)
+        color: #000000
+        display: inline-flex
+        align-items: center
+        img
+            display: inline-block
+            margin-right: 10px
+
+
+.discuss-socials
+    margin-left: 30px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    &__link
+        margin-bottom: 5px
+        &:last-child
+            margin-bottom: 0
+        a
+            display: block
+            img
