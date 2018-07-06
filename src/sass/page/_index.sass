@@ -1,9 +1,9 @@
 .intro
     overflow: hidden
+    background: #051518
+    z-index: -1
     &-list
         position: relative
-        background: #051518
-        z-index: -1
         .flickity-page-dots
             position: absolute
             top: 50%
@@ -13,6 +13,12 @@
             align-items: center
             justify-content: space-between
             transform: translateY(-50%)
+            +r(sm)
+                flex-direction: row
+                top: 90%
+                left: 50%
+                justify-content: center
+                transform: translateX(-50%)
             .dot
                 display: inline-block
                 width: 15px
@@ -20,13 +26,17 @@
                 border: 1px solid #FFF
                 border-radius: 50%
                 margin-bottom: 15px
+                +r(sm)
+                    margin-bottom: 0
+                    margin-right: 15px
                 &:hover
                     cursor: pointer
                 &:last-child
                     margin-bottom: 0
+                    +r(sm)
+                        margin-right: 0
                 &.is-selected
                     background: #FFF
-        &__item
 
 .intro-item
     width: 100vw
@@ -39,6 +49,8 @@
     overflow: hidden
     box-sizing: border-box
     padding-bottom: 5vh
+    +r(sm)
+        padding-bottom: 20vh
     &__bg
         position: absolute
         left: 50%
@@ -96,19 +108,16 @@
             margin-right: 0
         a
             display: block
-            img
 
 .features
     padding: 77px 0 150px 0
     background-color: #f4f7f9
-    &-body
-        &__title
-        &__items
 
 .fetures-items
-    display: flex
-    justify-content: space-between
+    display: block
     position: relative
+    .flickity-viewport
+        overflow: hidden
     .flickity-page-dots
         position: absolute
         display: flex
@@ -132,6 +141,11 @@
                     opacity: 1
     &__feat
         width: 30%
+        margin: 0 3%
+        +r(sm)
+            width: 48%
+        +r(xs)
+            width: 100%
 
 .fetures-feat
     box-sizing: border-box
@@ -154,21 +168,17 @@
 
 .works
     padding: 50px 0 77px 0
-    &-body
-        &__title
-        &__text
-        &__gallery
 
 .works-gallery
     &__nav
         margin-bottom: 30px
-    &__grid
 
 .works-nav
     display: flex
     justify-content: center
     align-items: center
-    &__nav
+    +r(sm)
+        flex-wrap: wrap
     &__buttin
         border: none
         background: none
@@ -183,6 +193,9 @@
             background-color: #0eb493
             color: #ffffff
             border-radius: 4px
+        +r(sm)
+        margin-right: 5px
+        margin-bottom: 10px
 
 .works-grids
     display: flex
@@ -190,12 +203,20 @@
     flex-wrap: wrap
     &__item
         width: calc(100% / 4)
+        +r(lg)
+            width: calc(100% / 3)
+        +r(sm)
+            width: calc(100% / 2)
+        +r(xs)
+            width: calc(100%)
+            text-align: center
         &:hover
             .works-hover
                 opacity: 0.9
 
 .works-grid
     position: relative
+    line-height: 0
     &__img
         display: inline-block
         max-width: 100%
@@ -206,7 +227,6 @@
         height: 100%
         left: 0
         top: 0
-
 
 .works-hover
     display: flex
@@ -234,17 +254,22 @@
 
 .team
     padding: 50px 0 150px 0
-    &-body
-        &__title
-        &__description
-        &__people
 
 .team-people
-    display: flex
-    justify-content: space-between
+    display: block
     position: relative
+    .flickity-viewport
+        overflow: hidden
     &__item
         width: 22%
+        margin: 0 3%
+        +r(lg)
+            width: 30%
+        +r(sm)
+            width: 48%
+        +r(xs)
+            width: 100%
+        
     .flickity-page-dots
         position: absolute
         display: flex
@@ -277,7 +302,10 @@
             color: #0eb493
     &__block
         position: relative
+        display: 
+        width: 100%
         margin-bottom: 15px
+        line-height: 0
     &__img
         display: inline-block
         max-width: 100%
@@ -348,17 +376,21 @@
     background: url('../img/bg-main.png') 0 0 no-repeat
     background-size: cover
     padding: 100px 0
-    &-body
-        &__title
-        &__item
+    +r(xs)
+        padding: 100px 0 50px 0
 
 .facts-item
     display: flex
     justify-content: space-between
     align-items: stretch
+    +r(xs)
+        flex-wrap: wrap
     &__fun
         width: 20%
         text-align: center
+        +r(xs)
+            width: 48%
+            margin-bottom: 50px
 
 .fact-fun
     &__img
@@ -370,7 +402,9 @@
         border: 1px solid #ffffff
         border-radius: 50%
         margin-bottom: 10px
-        img
+        +r(sm)
+            width: 100px
+            height: 100px
     &__number
         +rfs(60px)
         font-weight: 600
@@ -384,30 +418,33 @@
 
 .discuss
     padding: 77px 0
-    &-body
-        &__title
-        &__text
-        &__content
 
 .discuss-content
     display: flex
     justify-content: space-between
     align-items: stretch
-    &__address
-    &__form
-    &__socials
+    +r(sm)
+        flex-wrap: wrap
 
 .discuss-address
     +rfs(13px)
     line-height: 1.45
+    font-style: normal
     color: #062033
     width: 245px
     margin-right: 30px
+    +r(sm)
+        order: 2
+        width: 100%
+        text-align: center
+        margin-right: 0
     &__title
         +rfs(22px)
         text-align: left
         color: #062033
         margin-bottom: 10px
+        +r(sm)
+            text-align: center
     a
         text-decoration: none
         color: #6a737b
@@ -417,17 +454,27 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
+    +r(sm)
+        order: 0
+        width: 100%
+        margin-bottom: 40px
     &__title
         +rfs(24px)
         font-weight: bold
         text-align: left
         color: #062033
+        +r(sm)
+            text-align: center
     &__input
         border: none
         border-bottom: 1px solid #000
         opacity: 0.2
         +rfs(13px)
         margin-bottom: 15px
+        +r(xxs)
+            width: 100%
+            text-align: center
+            padding: 10px 15px
     &__button
         margin-left: auto
         background: none
@@ -436,6 +483,8 @@
         color: #000000
         display: inline-flex
         align-items: center
+        +r(xxs)
+            margin: auto
         img
             display: inline-block
             margin-right: 10px
@@ -447,10 +496,20 @@
     flex-direction: column
     justify-content: space-between
     align-items: center
+    +r(sm)
+        order: 1
+        width: 100%
+        flex-direction: row
+        justify-content: center
+        margin-bottom: 40px
+        margin-left: 0
     &__link
         margin-bottom: 5px
+        +r(sm)
+            margin-bottom: 0
+            margin-right: 0
         &:last-child
             margin-bottom: 0
+            margin-right: 0
         a
             display: block
-            img

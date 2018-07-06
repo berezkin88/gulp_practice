@@ -8,7 +8,8 @@
             <link rel="stylesheet" type="text/css" media="screen" href="css/libs.min.css" />
             <link rel="stylesheet" type="text/css" media="screen" href="css/main.min.css" />
     </head>
-<body> <header class="header">
+<body> 
+<header class="header">
 
     <div class="container">
         <div class="header-body">
@@ -20,6 +21,12 @@
             <div class="header-body__search">
                 <input type="text" class="search" placeholder="I’am your tag line">
             </div>
+
+            <button class="header-body__burger header-burger">
+                <span class="header-burger__line"></span>
+                <span class="header-burger__line"></span>
+                <span class="header-burger__line"></span>
+            </button>
             <nav class="header-body__nav">
                 <ul class="header-nav">
                     <li class="header-nav__item"><a href="#">Home</a></li>
@@ -34,6 +41,8 @@
 
 </header>
 
+
+<div class="mask"></div>
 
 <main class="home">
     <div class="intro">
@@ -69,7 +78,7 @@
                     </li>
                 </ul>
             </section>
-            <!-- <section class="intro-list__item intro-item">
+            <section class="intro-list__item intro-item">
                 <img src="img/bg-main.png" alt="" class="intro-item__bg">
                 <h2 class="intro-item__title">Meet
                     <span>Brandi!</span>
@@ -130,12 +139,12 @@
                         </a>
                     </li>
                 </ul>
-            </section> -->
-            <ol class="flickity-page-dots">
+            </section>
+            <!-- <ol class="flickity-page-dots">
                 <li class="dot is-selected"></li>
                 <li class="dot"></li>
                 <li class="dot"></li>
-            </ol>
+            </ol> -->
         </div>
     </div>
 
@@ -167,11 +176,11 @@
                         <p class="fetures-feat__text">Sed ut perspiciatis unde omnis iste natus error sivoluptatem accusantium doloremque laudantium, totam
                             rem aperiam, eaque ipsa quae aillo inventore</p>
                     </section>
-                    <ol class="flickity-page-dots">
+                    <!-- <ol class="flickity-page-dots">
                         <li class="dot is-selected"></li>
                         <li class="dot"></li>
                         <li class="dot"></li>
-                    </ol>
+                    </ol> -->
                 </div>
             </div>
         </div>
@@ -192,14 +201,14 @@
             </div>
             <div class="works-body_gallery works-gallery">
                 <div class="works-gallery__nav works-nav">
-                    <button class="works-nav__buttin active" type="button">All</button>
-                    <button class="works-nav__buttin" type="button">Branding</button>
-                    <button class="works-nav__buttin" type="button">Web</button>
-                    <button class="works-nav__buttin" type="button">Logo Design</button>
-                    <button class="works-nav__buttin" type="button">Photography</button>
+                    <button class="works-nav__buttin active" type="button" data-filter="*">All</button>
+                    <button class="works-nav__buttin" type="button" data-filter=".brand">Branding</button>
+                    <button class="works-nav__buttin" type="button" data-filter=".web">Web</button>
+                    <button class="works-nav__buttin" type="button" data-filter=".logo">Logo Design</button>
+                    <button class="works-nav__buttin" type="button" data-filter=".photo">Photography</button>
                 </div>
                 <div class="works-gallery__grid works-grids">
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid brand">
                         <img src="img/works/works-1.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -208,7 +217,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid web">
                         <img src="img/works/works-2.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -217,7 +226,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid brand photo">
                         <img src="img/works/works-3.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -226,7 +235,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid web">
                         <img src="img/works/works-4.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -235,7 +244,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid logo">
                         <img src="img/works/works-5.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -244,7 +253,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid photo">
                         <img src="img/works/works-6.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -253,7 +262,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid brand">
                         <img src="img/works/works-7.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -262,7 +271,7 @@
                             <p class="works-hover__text">Photography</p>
                         </div>
                     </section>
-                    <section class="works-grids__item works-grid">
+                    <section class="works-grids__item works-grid web photo">
                         <img src="img/works/works-8.png" alt="" class="works-grid__img">
                         <div class="works-grid__hover works-hover">
                             <img src="img/hover-eye.png" alt="" class="works-hover__logo">
@@ -409,11 +418,11 @@
                         </h3>
                         <p class="team-item__position">Managing Director</p>
                     </section>
-                    <ol class="flickity-page-dots">
+                    <!-- <ol class="flickity-page-dots">
                         <li class="dot is-selected"></li>
                         <li class="dot"></li>
                         <li class="dot"></li>
-                    </ol>
+                    </ol> -->
                 </div>
             </div>
         </div>

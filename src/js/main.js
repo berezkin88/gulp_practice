@@ -1,4 +1,26 @@
-//=require components/1.js
+//=require components/**.*
 
-console.log('1');
+$(window).ready(function() {
+    menuShow();
+
+    $('.intro-list').flickity({
+        cellAlign: 'left',
+        contain: true,
+        prevNextButtons: false
+      });
+
+      $('.fetures-items').flickity({
+        cellAlign: 'left',
+        contain: true,
+        prevNextButtons: false
+      });
+
+      $('.team-people').flickity({
+        cellAlign: 'left',
+        contain: true,
+        prevNextButtons: false
+      });
+
+      filter();
+})
 
